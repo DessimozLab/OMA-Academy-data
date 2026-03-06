@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 set -e
 
+# download dbs
+if [ ! -f /workspace/SIBBiodiversityBioinformatics2025/Module4_FastOMA/working_dir/in_folder/omamerdb.h5 ]; then
+  curl -L -O https://omabrowser.org/All.Jul2024/Saccharomyceta.h5
+  cp Saccharomyceta.h5 /workspace/SIBBiodiversityBioinformatics2025/Module4_FastOMA/working_dir/in_folder/omamerdb.h5
+  mv Saccharomyceta.h5 /workspace/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/
+fi
+
+if [ ! -f /workspace/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/ ]; then
+  curl -L -O https://omabrowser.org/All.Jul2024/Metazoa.h5
+  mv Metazoa.h5 /workspace/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/
+fi
+
 # Install FastOMA (repo must exist first)
 cd Module4_FastOMA/working_dir
 
