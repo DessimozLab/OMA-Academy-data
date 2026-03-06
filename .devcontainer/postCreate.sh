@@ -3,11 +3,12 @@ set -e
 
 # download dbs
 if [ ! -f /workspaces/SIBBiodiversityBioinformatics2025/Module4_FastOMA/working_dir/in_folder/omamerdb.h5 ]; then
-  curl -L -O https://omabrowser.org/All.Jul2024/Saccharomyceta.h5
+  curl -L -O https://zenodo.org/records/17826591/files/Saccharomyceta.h5?download=1
   cp Saccharomyceta.h5 /workspaces/SIBBiodiversityBioinformatics2025/Module4_FastOMA/working_dir/in_folder/omamerdb.h5
   mv Saccharomyceta.h5 /workspaces/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/
 fi
-
+# METAZOA DOWNLOAD LINK WAS NOT UPDATED YET TO FACILITATE CREATION OF NEW WORKSPACE
+# WHEN YOU ARE READY, CHANGE TO THIS ONE: https://zenodo.org/records/17826591/files/Metazoa.h5?download=1
 if [ ! -f /workspaces/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/ ]; then
   curl -L -O https://omabrowser.org/All.Jul2024/Metazoa.h5
   mv Metazoa.h5 /workspaces/SIBBiodiversityBioinformatics2025/Module2_OMAmer/working_dir/omamer_databases/
