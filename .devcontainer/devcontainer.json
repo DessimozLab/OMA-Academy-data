@@ -14,5 +14,5 @@
     }
   },
 
-  "postCreateCommand": "bash .devcontainer/postCreate.sh"
+  "postCreateCommand": "bash SIBBiodiversityBioinformatics2025/.devcontainer/postCreate.sh"
 }
